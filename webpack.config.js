@@ -1,7 +1,7 @@
 const path = require("path");
 
-const APP_DIR = path.resolve(__dirname, "src");
-const BUILD_DIR = path.resolve(__dirname, "client");
+const APP_DIR = path.resolve(__dirname, "client/src");
+const BUILD_DIR = path.resolve(__dirname, "client/dist");
 
 module.exports = {
   entry: APP_DIR + "/Index.jsx",
