@@ -15,5 +15,19 @@
   "bugs": {
     "url": "https://github.com/cakelyn/rpg-gen/issues"
   },
-  "homepage": "https://github.com/cakelyn/rpg-gen#readme"
+  "homepage": "https://github.com/cakelyn/rpg-gen#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.6",
+    "path": "^0.12.7",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "webpack": "^4.16.4"
+  }
 }
