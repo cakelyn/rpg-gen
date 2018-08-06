@@ -15,9 +15,21 @@ module.exports = {
         test: /\.jsx?/,
         include: APP_DIR,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: "babel-loader"
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
       }
     ]
   }
