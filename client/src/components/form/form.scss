@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  & input {
+    background: white no-repeat;
+    background-image: linear-gradient(to bottom, #1abc9c, #1abc9c),
+      linear-gradient(to bottom, silver, silver);
+    background-position: 0% 100%, 00% 100%;
+    background-size: 0 2px, 100% 1px;
+    border: 0;
+    display: block;
+    margin: 20px;
+    padding: 10px 5px;
+    transition: background-size 0.3s;
+    width: 200px;
+  }
+
+  & input:focus {
+    background-size: 100% 2px, 100% 1px;
+    outline: none;
+  }
+}

@@ -17,7 +17,7 @@ class Form extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <form onSubmit={this.createCharacter}>
+      <form onSubmit={this.createCharacter} className="form">
         <input
           required
           type="text"
