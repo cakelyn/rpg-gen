@@ -50,6 +50,7 @@ class Form extends React.Component {
           value={this.state.race}
           onChange={e => this.handleChange(e)}
         >
+          <option value="">Select your race</option>
           <option value="Dragonborn">Dragonborn</option>
           <option value="Dwarf">Dwarf</option>
           <option value="Elf">Elf</option>
@@ -66,6 +67,7 @@ class Form extends React.Component {
           value={this.state.class}
           onChange={e => this.handleChange(e)}
         >
+          <option value="">Select your class</option>
           <option value="Barbarian">Barbarian</option>
           <option value="Bard">Bard</option>
           <option value="Cleric">Cleric</option>
