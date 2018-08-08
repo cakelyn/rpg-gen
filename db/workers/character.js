@@ -14,7 +14,7 @@ module.exports.store = function(n, r, cl, attr) {
   }).save();
 };
 
-module.exports.get = cb =>
+module.exports.get = () =>
   Character.find({})
     .sort({ _id: -1 })
     .limit(10)

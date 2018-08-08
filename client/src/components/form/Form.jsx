@@ -20,12 +20,21 @@ class Form extends React.Component {
 
     axios
       .post("/api/characters", this.state)
-      .then(res => console.log(res))
+      .then(res => {
+        this.resetFormState();
+      })
       .catch(err => console.log(err));
   }
 
+  resetFormState() {
+    this.setState({
+      class: "",
+      name: "",
+      race: ""
+    });
+  }
+
   render() {
-    console.log(this.state);
     return (
       <form onSubmit={this.handleSubmit.bind(this)} className="form">
         <input
