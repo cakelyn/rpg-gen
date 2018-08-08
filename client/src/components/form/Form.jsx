@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 class Form extends React.Component {
   constructor(props) {
@@ -14,10 +15,19 @@ class Form extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+
+    axios
+      .post("/api/characters", this.state)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+  }
+
   render() {
     console.log(this.state);
     return (
-      <form onSubmit={this.createCharacter} className="form">
+      <form onSubmit={this.handleSubmit.bind(this)} className="form">
         <input
           required
           type="text"

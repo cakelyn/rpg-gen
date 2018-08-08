@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const schemas = require("./schemas");
+const charClass = require("./workers/charClass");
+const charRace = require("./workers/charRace");
 
 mongoose.connect("mongodb://localhost:27017/test");
 
@@ -9,41 +10,9 @@ db.once("open", function() {
   console.log("database connected!");
 });
 
-const classes = [
-  "Barbarian",
-  "Bard",
-  "Cleric",
-  "Druid",
-  "Fighter",
-  "Monk",
-  "Paladin",
-  "Ranger",
-  "Rogue",
-  "Sourcerer",
-  "Warlock",
-  "Wizard"
-];
+charClass.populate();
+charRace.populate();
 
-const races = [
-  "Dragonborn",
-  "Dwarf",
-  "Elf",
-  "Gnome",
-  "Half-elf",
-  "Half-orc",
-  "Halfling",
-  "Human",
-  "Tiefling"
-];
-
-classes.forEach(function(name) {
-  new schemas.Class({
-    name: name
-  }).save();
-});
-
-races.forEach(function(name) {
-  new schemas.Race({
-    name: name
-  }).save();
-});
+module.exports.character = require("./workers/character");
+module.exports.class = charClass;
+module.exports.race = charRace;

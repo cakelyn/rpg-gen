@@ -21,7 +21,7 @@ const createReducer = (state = {}, action) => {
 const getReducer = (state = [], action) => {
   switch (action.type) {
     case types.GET:
-      action.payload;
+      return action.payload;
     default:
       return state;
   }
